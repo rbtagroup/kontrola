@@ -348,7 +348,8 @@
         {id:'taximeter',label:'Taxametr (plomba, papír)'},
         {id:'terminal',label:'Platební terminál (funkční, nabitý)'},
         {id:'phone',label:'Telefon e-disp'},
-        {id:'equipment',label:'Výbava (lékárnička, trojúhelník)'},
+        {id:'charger',label:'Nabíječka ve voze'},
+        {id:'equipment',label:'Výbava (lékárnička, trojúhelník, vesty)'},
         {id:'docs',label:'Doklady'},
         {id:'app',label:'Aplikace / GPS'},
       ]
@@ -440,7 +441,7 @@
               <input class="note hidden extraFields" placeholder="Popis závady">
               <img class="photoPreview hidden" alt="Náhled fotky">
             ` : `
-              <input class="note hidden" placeholder="Poznámka (volitelně)">
+              <input class="note hidden extraFields" placeholder="Poznámka / Co chybí">
               <img class="photoPreview hidden" alt="Náhled fotky">
             `}
           </div>
@@ -467,13 +468,10 @@
       item.classList.add(state === 'nok' ? 'nok' : 'ok');
       item.style.outline = '';
 
-      const group = item.dataset.group;
       const extras = item.querySelectorAll('.extraFields');
 
       if(state === 'nok'){
-        if(group === 'tech' || group === 'visual'){
-          extras.forEach(el => el.classList.remove('hidden'));
-        }
+        extras.forEach(el => el.classList.remove('hidden'));
       } else {
         extras.forEach(el => el.classList.add('hidden'));
         const note = item.querySelector('.note');
@@ -547,8 +545,8 @@
       for(const i of items){
         if(i.state === 'nok'){
           const itemNode = document.querySelector(`.item[data-id="${i.id}"]`);
-          if((i.group === 'tech' || i.group === 'visual') && !i.note){
-            return showError(itemNode.querySelector('.note'), `Doplňte popis závady u položky: ${i.label}`);
+          if((i.group === 'tech' || i.group === 'visual' || i.id === 'docs') && !i.note){
+            return showError(itemNode.querySelector('.note'), `Doplňte popis závady / co chybí u položky: ${i.label}`);
           }
           if(i.group === 'visual'){
             if(!i.type) return showError(itemNode.querySelector('.issueType'), `Vyberte typ závady: ${i.label}`);
@@ -643,7 +641,7 @@
         i.dataset.photo = '';
         i.classList.remove('ok','nok','carry','managerHidden');
         i.querySelectorAll('.state').forEach(b => b.classList.remove('active'));
-        const note = i.querySelector('.note'); if(note){ note.value = ''; if(i.dataset.group !== 'other') note.classList.add('hidden'); }
+        const note = i.querySelector('.note'); if(note){ note.value = ''; note.classList.add('hidden'); }
         const t = i.querySelector('.issueType'); if(t) t.value = '';
         const w = i.querySelector('.issueWho'); if(w) w.value = '';
         const img = i.querySelector('.photoPreview'); if(img){ img.src=''; img.classList.add('hidden'); }
@@ -659,14 +657,12 @@
           const nokBtn = item.querySelector('.nokBtn');
           if(nokBtn) nokBtn.classList.add('active');
 
-          if(found.group === 'tech' || found.group === 'visual'){
-            item.querySelectorAll('.extraFields').forEach(el => el.classList.remove('hidden'));
-          }
+          item.querySelectorAll('.extraFields').forEach(el => el.classList.remove('hidden'));
 
           const note = item.querySelector('.note');
           if(note){
             note.value = found.note || 'Převzato z minulé směny';
-            if(found.group !== 'other') note.classList.remove('hidden');
+            note.classList.remove('hidden');
           }
 
           const t = item.querySelector('.issueType'); if(t) t.value = found.type || '';
