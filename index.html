@@ -32,7 +32,6 @@
       
       --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
       --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
-      --shadow-glow: 0 0 15px rgba(250, 204, 21, 0.2);
     }
 
     html, body {
@@ -46,21 +45,21 @@
       font-family: 'Inter', sans-serif;
       background: var(--bg-gradient);
       color: var(--text-main);
-      padding: 16px;
+      padding: 12px; /* Kompaktnější padding na okrajích */
       padding-bottom: 60px;
       min-height: 100vh;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     .app { max-width: 900px; margin: 0 auto; position: relative; }
 
     /* Header styling */
     .topbar {
-      display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px;
-      padding: 10px 0;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px;
+      padding: 6px 0;
     }
     h1 {
-      margin: 0; font-size: 32px; font-weight: 800; letter-spacing: -0.5px;
+      margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.5px;
     }
     .gold-text {
       background: var(--gold-grad);
@@ -68,50 +67,50 @@
       -webkit-text-fill-color: transparent;
       text-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
     }
-    .sub { color: var(--text-muted); font-size: 14px; margin-top: 4px; font-weight: 500;}
+    .sub { color: var(--text-muted); font-size: 13px; margin-top: 2px; font-weight: 500;}
     .ver { 
-      display: inline-block; padding: 2px 8px; border-radius: 6px; 
+      display: inline-block; padding: 2px 6px; border-radius: 6px; 
       background: rgba(255,255,255,0.1); border: 1px solid var(--card-border); 
-      font-size: 11px; font-weight: 700; vertical-align: middle; margin-left: 6px;
+      font-size: 10px; font-weight: 700; vertical-align: middle; margin-left: 6px;
     }
 
-    /* Glassmorphism Cards */
+    /* Glassmorphism Cards - Kompaktnější */
     .card {
       background: var(--card-bg);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 24px;
-      margin: 16px 0;
+      border-radius: 20px; /* Z 24px na 20px */
+      padding: 16px; /* Z 24px na 16px */
+      margin: 12px 0; /* Z 16px na 12px */
       box-shadow: var(--shadow-md);
     }
     .cardHead {
-      display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 12px;
+      display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px;
     }
-    h2 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.3px;}
+    h2 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.3px;}
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
     
-    .field { display: flex; flex-direction: column; gap: 8px; }
-    .field span { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;}
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field span { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;}
 
-    /* Premium Inputs */
+    /* Premium Inputs - Kompaktnější */
     input, select, textarea {
       width: 100%;
       background: rgba(0, 0, 0, 0.2);
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 14px;
-      padding: 14px 16px;
-      font-size: 16px;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 15px;
       font-family: inherit;
       transition: all 0.3s ease;
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
     }
     input::placeholder, textarea::placeholder { color: #64748b; }
-    textarea { min-height: 100px; resize: vertical; }
+    textarea { min-height: 80px; resize: vertical; }
     input:focus, select:focus, textarea:focus { 
       outline: none; 
       border-color: var(--gold); 
@@ -119,13 +118,13 @@
       background: rgba(0, 0, 0, 0.4);
     }
 
-    /* Checklist Items */
+    /* Checklist Items - Kompaktnější */
     .item {
       background: var(--item-bg);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 16px;
-      margin: 12px 0;
+      border-radius: 14px;
+      padding: 12px;
+      margin: 8px 0;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .item:hover { background: rgba(30, 41, 59, 0.8); }
@@ -133,54 +132,54 @@
     .item.nok { border-color: rgba(239,68,68,0.5); background: rgba(239,68,68,0.04); box-shadow: 0 4px 12px rgba(239,68,68,0.08); }
     .item.carry { border-color: rgba(245,158,11,0.5); background: rgba(245,158,11,0.04); }
     
-    .row, .rideRow { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    .label { font-weight: 600; font-size: 16px; }
+    .row, .rideRow { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .label { font-weight: 600; font-size: 15px; }
     
-    /* Toggle Buttons */
-    .btns { display: flex; gap: 8px; background: rgba(0,0,0,0.2); padding: 4px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.05);}
+    /* Toggle Buttons - Zmenšeno pro mobil */
+    .btns { display: flex; gap: 6px; background: rgba(0,0,0,0.2); padding: 4px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);}
     .state {
-      width: 48px; height: 42px; border: none; border-radius: 10px;
+      width: 44px; height: 38px; border: none; border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer; background: transparent; color: #64748b; 
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .state svg { width: 22px; height: 22px; stroke-width: 2.5px; }
+    .state svg { width: 20px; height: 20px; stroke-width: 2.5px; }
     .state:active { transform: scale(0.9); }
     
     .okBtn.active { background: var(--green-grad); color: #fff; box-shadow: 0 4px 10px rgba(34,197,94,0.3); }
     .nokBtn.active { background: var(--red-grad); color: #fff; box-shadow: 0 4px 10px rgba(239,68,68,0.3); }
 
-    .note, .rideIssue { margin-top: 12px; }
+    .note, .rideIssue { margin-top: 10px; }
     .hidden { display: none !important; }
     
     /* Alert / Warning Boxes */
     .warning {
       background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(220,38,38,0.2));
       border: 1px solid rgba(239,68,68,0.4);
-      border-radius: 16px; padding: 16px;
-      font-weight: 700; font-size: 16px;
-      margin: 16px 0; color: #fca5a5;
-      display: flex; align-items: center; gap: 12px;
+      border-radius: 14px; padding: 14px;
+      font-weight: 700; font-size: 15px;
+      margin: 14px 0; color: #fca5a5;
+      display: flex; align-items: center; gap: 10px;
       box-shadow: 0 8px 20px rgba(239,68,68,0.1);
     }
-    .warning svg { width: 24px; height: 24px; flex-shrink: 0; }
+    .warning svg { width: 22px; height: 22px; flex-shrink: 0; }
 
     /* Checkboxes */
     .checkline {
-      display: flex; align-items: center; gap: 12px; margin: 8px 0 16px; 
-      cursor: pointer; padding: 12px; background: rgba(255,255,255,0.03); 
-      border-radius: 14px; border: 1px solid transparent; transition: all 0.2s;
+      display: flex; align-items: center; gap: 10px; margin: 6px 0 12px; 
+      cursor: pointer; padding: 10px; background: rgba(255,255,255,0.03); 
+      border-radius: 12px; border: 1px solid transparent; transition: all 0.2s;
     }
     .checkline:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1); }
     .checkline input { 
-      width: 22px; height: 22px; accent-color: var(--gold); cursor: pointer;
+      width: 20px; height: 20px; accent-color: var(--gold); cursor: pointer;
     }
-    .checkline span { font-weight: 500; font-size: 15px; }
+    .checkline span { font-weight: 500; font-size: 14px; }
 
-    /* Action Buttons */
-    .actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 24px; }
+    /* Action Buttons - Kompaktnější */
+    .actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 18px; }
     .btn {
-      border: none; border-radius: 14px; padding: 16px; font-weight: 700; font-size: 15px;
+      border: none; border-radius: 12px; padding: 12px; font-weight: 700; font-size: 14px;
       cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex; align-items: center; justify-content: center; gap: 8px;
       font-family: inherit;
@@ -189,8 +188,8 @@
     .primary { 
       background: var(--gold-grad); color: #000; 
       box-shadow: 0 6px 16px rgba(245, 158, 11, 0.25); 
-      grid-column: 1 / -1; /* Make primary span full width on mobile */
-      font-size: 18px; padding: 18px;
+      grid-column: 1 / -1; 
+      font-size: 16px; padding: 16px;
     }
     .primary:hover { box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4); }
     
@@ -199,52 +198,52 @@
     
     .dangerBtn { background: rgba(239,68,68,0.1); color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); }
     .dangerBtn:hover { background: rgba(239,68,68,0.2); }
-    .smallBtn { padding: 10px 14px; font-size: 13px; border-radius: 10px; }
+    .smallBtn { padding: 8px 12px; font-size: 12px; border-radius: 8px; }
 
     /* Summaries */
     .summary {
       background: linear-gradient(135deg, rgba(239,68,68,0.05), rgba(239,68,68,0.1));
       border: 1px solid rgba(239,68,68,0.2);
-      border-radius: 16px; padding: 16px; margin-bottom: 20px;
+      border-radius: 14px; padding: 14px; margin-bottom: 16px;
     }
-    .summaryTitle { font-weight: 800; margin-bottom: 12px; color: #fca5a5; display: flex; align-items: center; gap: 8px;}
-    .summaryItem { padding: 12px; border-radius: 12px; background: rgba(0,0,0,0.2); margin: 8px 0; border: 1px solid rgba(255,255,255,0.05);}
+    .summaryTitle { font-weight: 800; margin-bottom: 10px; color: #fca5a5; display: flex; align-items: center; gap: 8px; font-size: 15px;}
+    .summaryItem { padding: 10px; border-radius: 10px; background: rgba(0,0,0,0.2); margin: 6px 0; border: 1px solid rgba(255,255,255,0.05);}
 
     /* Status Badges */
     .status {
-      padding: 8px 16px; border-radius: 999px; font-weight: 800; font-size: 14px;
+      padding: 6px 14px; border-radius: 999px; font-weight: 800; font-size: 13px;
       border: 1px solid var(--card-border); background: rgba(255,255,255,0.04); 
       text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); letter-spacing: 0.5px;
     }
     .status.ok { color: #86efac; border-color: rgba(34,197,94,0.3); background: rgba(34,197,94,0.1);}
     .status.nok { color: #fca5a5; border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.1);}
-    .pill { padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); font-size: 12px; font-weight: 600;}
+    .pill { padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); font-size: 11px; font-weight: 600;}
 
     /* Photos */
-    .photoBtn { padding: 12px 16px; margin-top: 12px; width: 100%; border-style: dashed;}
-    .photoPreview { display: block; max-width: 100%; height: 160px; margin-top: 12px; border-radius: 12px; border: 1px solid var(--card-border); object-fit: cover; box-shadow: var(--shadow-sm);}
+    .photoBtn { padding: 10px 14px; margin-top: 10px; width: 100%; border-style: dashed;}
+    .photoPreview { display: block; max-width: 100%; height: 140px; margin-top: 10px; border-radius: 10px; border: 1px solid var(--card-border); object-fit: cover; box-shadow: var(--shadow-sm);}
     
-    /* Meta rows (selects for issues) */
-    .metaRow { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px;}
-    .metaRow select { font-size: 14px; padding: 10px; }
+    /* Meta rows */
+    .metaRow { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px;}
+    .metaRow select { font-size: 13px; padding: 8px; }
     .metaRow .photoBtn { grid-column: 1 / -1; margin-top: 0; }
 
     /* History styling */
-    #history { display: grid; gap: 12px; }
+    #history { display: grid; gap: 10px; }
     .histItem {
       background: rgba(255,255,255,0.02); border: 1px solid var(--card-border);
-      border-radius: 16px; padding: 16px; cursor: pointer;
+      border-radius: 14px; padding: 14px; cursor: pointer;
       transition: all 0.2s;
     }
     .histItem:hover { transform: translateY(-2px); background: rgba(255,255,255,0.04); box-shadow: var(--shadow-sm); border-color: rgba(255,255,255,0.1);}
-    .histTop { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
-    .histMeta { color: var(--text-muted); font-size: 13px; margin-top: 8px; line-height: 1.4;}
-    .tag { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); letter-spacing: 0.5px;}
+    .histTop { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+    .histMeta { color: var(--text-muted); font-size: 12px; margin-top: 6px; line-height: 1.4;}
+    .tag { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 700; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); letter-spacing: 0.5px;}
 
     /* Modal Overlay */
     .detailOverlay {
       position: fixed; inset: 0; background: rgba(2, 6, 23, 0.8);
-      display: flex; align-items: center; justify-content: center; padding: 16px;
+      display: flex; align-items: center; justify-content: center; padding: 12px;
       z-index: 1000; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
       animation: fadeIn 0.2s ease-out;
     }
@@ -252,45 +251,45 @@
     
     .detailCard {
       width: min(780px, 100%); max-height: 90vh; overflow: auto;
-      background: #0f172a; border: 1px solid var(--card-border); border-radius: 24px; 
-      padding: 24px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      background: #0f172a; border: 1px solid var(--card-border); border-radius: 20px; 
+      padding: 20px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
       animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     
-    .detailList { display: grid; gap: 10px; margin-top: 16px; }
-    .detailRow { padding: 14px; border-radius: 14px; background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); line-height: 1.5; font-size: 15px;}
-    .histPhotos { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-    .histThumb { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); box-shadow: var(--shadow-sm);}
+    .detailList { display: grid; gap: 8px; margin-top: 14px; }
+    .detailRow { padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); line-height: 1.4; font-size: 14px;}
+    .histPhotos { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .histThumb { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); box-shadow: var(--shadow-sm);}
 
     /* Signature */
     .signatureWrap {
-      border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; background: rgba(0,0,0,0.3);
-      overflow: hidden; position: relative; margin-top: 8px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; background: rgba(0,0,0,0.3);
+      overflow: hidden; position: relative; margin-top: 6px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
     }
-    .signaturePad { width: 100%; height: 180px; touch-action: none; cursor: crosshair; }
-    .sigBtns { position: absolute; top: 8px; right: 8px; display: flex; gap: 8px; }
+    .signaturePad { width: 100%; height: 160px; touch-action: none; cursor: crosshair; }
+    .sigBtns { position: absolute; top: 6px; right: 6px; display: flex; gap: 6px; }
 
     /* Toast Notification */
     #toast-container {
       position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
-      z-index: 9999; display: flex; flex-direction: column; gap: 12px;
-      pointer-events: none; width: 90%; max-width: 420px;
+      z-index: 9999; display: flex; flex-direction: column; gap: 10px;
+      pointer-events: none; width: 90%; max-width: 400px;
     }
     .toast {
-      background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px);
       border: 1px solid var(--card-border); color: var(--text-main);
-      padding: 16px 20px; border-radius: 16px; font-weight: 600;
+      padding: 14px 18px; border-radius: 14px; font-weight: 600; font-size: 14px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-align: center;
       opacity: 0; transform: translateY(-20px); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex; align-items: center; justify-content: center; gap: 10px;
     }
     .toast.show { opacity: 1; transform: translateY(0); }
-    .toast.error { background: rgba(127, 29, 29, 0.9); border-color: rgba(239,68,68,0.4); color: #fecaca; }
-    .toast.success { background: rgba(20, 83, 45, 0.9); border-color: rgba(34,197,94,0.4); color: #bbf7d0; }
+    .toast.error { background: rgba(127, 29, 29, 0.95); border-color: rgba(239,68,68,0.4); color: #fecaca; }
+    .toast.success { background: rgba(20, 83, 45, 0.95); border-color: rgba(34,197,94,0.4); color: #bbf7d0; }
 
     /* SVG Icons Utility */
-    .icon { display: inline-block; width: 20px; height: 20px; stroke-width: 2; stroke: currentColor; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .icon { display: inline-block; width: 18px; height: 18px; stroke-width: 2; stroke: currentColor; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
     /* Print hiding */
     .printWrap { display: none; }
@@ -416,13 +415,13 @@
         <span>Řidič přede mnou odevzdal vozidlo v pořádku</span>
       </label>
 
-      <div class="field" style="margin: 20px 0;">
-        <span style="font-weight:700; color:var(--text-main); font-size:15px; text-transform: none;">Podpis řidiče (potvrzení stavu)</span>
+      <div class="field" style="margin: 16px 0;">
+        <span style="font-weight:700; color:var(--text-main); font-size:14px; text-transform: none;">Podpis řidiče (potvrzení stavu)</span>
         <div class="signatureWrap">
           <canvas id="signaturePad" class="signaturePad"></canvas>
           <div class="sigBtns">
             <button class="btn secondary smallBtn" type="button" id="clearSigBtn">
-                <svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
+                <svg class="icon" style="width:14px;height:14px;" viewBox="0 0 24 24"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
                 Vymazat
             </button>
           </div>
@@ -437,7 +436,7 @@
         <div id="nokSummary"></div>
       </div>
 
-      <label class="checkline" style="margin-bottom: 24px;">
+      <label class="checkline" style="margin-bottom: 20px;">
         <input type="checkbox" id="managerMode">
         <span style="color: var(--text-muted);">Manažerský režim (skrýt položky bez závady)</span>
       </label>
@@ -467,7 +466,7 @@
         <div style="display: flex; gap: 8px; align-items: center;">
           <div class="pill muted" id="historyCount">0 záznamů</div>
           <button class="btn dangerBtn smallBtn" id="clearHistoryBtn" title="Uvolní paměť zařízení">
-              <svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+              <svg class="icon" style="width:14px;height:14px;" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
           </button>
         </div>
       </div>
@@ -478,10 +477,10 @@
   <template id="historyDetailTemplate">
     <div class="detailOverlay">
       <div class="detailCard">
-        <div class="cardHead" style="margin-bottom: 24px;">
-          <h2 style="font-size: 24px;">Detail směny</h2>
+        <div class="cardHead" style="margin-bottom: 20px;">
+          <h2 style="font-size: 20px;">Detail směny</h2>
           <button class="btn secondary smallBtn" id="closeDetailBtn">
-              <svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               Zavřít
           </button>
         </div>
@@ -555,7 +554,7 @@
     function showError(element, message) {
       element.style.outline = '2px solid var(--red)';
       element.style.outlineOffset = '2px';
-      element.style.borderRadius = '14px';
+      element.style.borderRadius = '12px';
       element.scrollIntoView({ behavior: 'smooth', block: 'center' });
       showToast(message, 'error');
       
@@ -652,11 +651,6 @@
 
       if(state === 'nok'){
         extras.forEach(el => el.classList.remove('hidden'));
-        // Focus první input pokud je zobrazen
-        const firstInput = item.querySelector('.note, .issueType');
-        if(firstInput && firstInput.classList.contains('hidden') === false) {
-            // setTimeout(() => firstInput.focus(), 50); // Optional auto-focus
-        }
       } else {
         extras.forEach(el => el.classList.add('hidden'));
         const note = item.querySelector('.note');
@@ -902,7 +896,7 @@
         summaryBox.classList.remove('hidden');
         summary.innerHTML = nok.map(i => `
           <div class="summaryItem">
-            <strong style="color:var(--text-main); font-size: 15px;">${escapeHtml(i.label)}</strong>${i.carried ? ' <span class="tag" style="background:var(--orange); border:none; color:#000;">Z MINULA</span>' : ''}
+            <strong style="color:var(--text-main); font-size: 14px;">${escapeHtml(i.label)}</strong>${i.carried ? ' <span class="tag" style="background:var(--orange); border:none; color:#000;">Z MINULA</span>' : ''}
             <div class="histMeta">${escapeHtml(i.note || 'bez popisu')}</div>
             ${i.group === 'visual' ? `<div class="histMeta" style="color:#64748b;">${i.type ? 'Typ: ' + escapeHtml(i.type) : ''}${i.who ? ' • Vznik: ' + escapeHtml(i.who) : ''}</div>` : ''}
           </div>
@@ -917,7 +911,7 @@
       byId('historyCount').textContent = history.length + ' záznamů';
 
       if(history.length === 0){
-        byId('history').innerHTML = '<div class="histMeta" style="text-align:center; padding: 30px 20px;">Žádná historie směn ve vašem zařízení.</div>';
+        byId('history').innerHTML = '<div class="histMeta" style="text-align:center; padding: 20px;">Žádná historie směn ve vašem zařízení.</div>';
         return;
       }
 
@@ -934,7 +928,7 @@
         return `
           <div class="histItem" data-id="${h.id}">
             <div class="histTop">
-              <strong style="font-size:15px; color:#fff;">${escapeHtml(h.spz)} <span style="color:var(--text-muted); font-weight:normal;">• ${escapeHtml(h.driver)}</span></strong>
+              <strong style="font-size:14px; color:#fff;">${escapeHtml(h.spz)} <span style="color:var(--text-muted); font-weight:normal;">• ${escapeHtml(h.driver)}</span></strong>
               ${statusTag}
             </div>
             <div class="histMeta">${escapeHtml(dt)} • Závad: <strong style="color:${nokCount > 0 ? 'var(--red)' : 'var(--text-muted)'}">${nokCount}</strong></div>
@@ -957,37 +951,37 @@
           <strong style="color:#fff;">${escapeHtml(i.label)}</strong> — 
           <span style="color:${i.state==='ok'?'var(--green)':'var(--red)'}; font-weight:600;">${escapeHtml(i.state ? i.state.toUpperCase() : 'NEVYPLNĚNO')}</span>
           ${i.carried ? ' <span class="tag" style="background:var(--orange); color:#000; border:none; float:right;">Z MINULA</span>' : ''}
-          ${i.note ? `<div class="histMeta" style="color:#cbd5e1; margin-top:8px;">${escapeHtml(i.note)}</div>` : ''}
+          ${i.note ? `<div class="histMeta" style="color:#cbd5e1; margin-top:6px;">${escapeHtml(i.note)}</div>` : ''}
           ${i.group === 'visual' && i.state === 'nok' ? `<div class="histMeta">${i.type ? 'Typ: ' + escapeHtml(i.type) : ''}${i.who ? ' • Vznik: ' + escapeHtml(i.who) : ''}</div>` : ''}
           ${i.photo ? `<div class="histPhotos"><img class="histThumb" src="${i.photo}" alt="Foto závady" onclick="window.open('${i.photo}')" style="cursor:zoom-in;"></div>` : ''}
         </div>
       `).join('');
 
       body.innerHTML = `
-        <div class="grid" style="margin-bottom: 24px; background: rgba(0,0,0,0.2); padding: 16px; border-radius: 16px; border: 1px solid var(--card-border);">
-            <div><strong style="color:var(--text-muted); font-size:12px; text-transform:uppercase;">SPZ</strong><br><span style="font-size:18px; color:#fff; font-weight:700;">${escapeHtml(rec.spz)}</span></div>
-            <div><strong style="color:var(--text-muted); font-size:12px; text-transform:uppercase;">Datum a čas</strong><br><span style="color:#fff;">${escapeHtml(new Date(rec.time).toLocaleString('cs-CZ'))}</span></div>
-            <div><strong style="color:var(--text-muted); font-size:12px; text-transform:uppercase;">Řidič</strong><br><span style="color:#fff;">${escapeHtml(rec.driver)}</span></div>
-            <div><strong style="color:var(--text-muted); font-size:12px; text-transform:uppercase;">Předchůdce</strong><br><span style="color:#fff;">${escapeHtml(rec.taken)}</span></div>
+        <div class="grid" style="margin-bottom: 20px; background: rgba(0,0,0,0.2); padding: 14px; border-radius: 14px; border: 1px solid var(--card-border);">
+            <div><strong style="color:var(--text-muted); font-size:11px; text-transform:uppercase;">SPZ</strong><br><span style="font-size:16px; color:#fff; font-weight:700;">${escapeHtml(rec.spz)}</span></div>
+            <div><strong style="color:var(--text-muted); font-size:11px; text-transform:uppercase;">Datum a čas</strong><br><span style="color:#fff;">${escapeHtml(new Date(rec.time).toLocaleString('cs-CZ'))}</span></div>
+            <div><strong style="color:var(--text-muted); font-size:11px; text-transform:uppercase;">Řidič</strong><br><span style="color:#fff;">${escapeHtml(rec.driver)}</span></div>
+            <div><strong style="color:var(--text-muted); font-size:11px; text-transform:uppercase;">Předchůdce</strong><br><span style="color:#fff;">${escapeHtml(rec.taken)}</span></div>
         </div>
         
-        <div style="display:grid; gap: 10px; margin-bottom: 24px;">
+        <div style="display:grid; gap: 8px; margin-bottom: 20px;">
             <div class="detailRow"><strong>Tachometr:</strong> ${escapeHtml(rec.kmStart || '-')} ➔ ${escapeHtml(rec.kmEnd || '-')} km</div>
             <div class="detailRow"><strong>Stav paliva:</strong> ${escapeHtml(rec.fuel || '-')}</div>
             <div class="detailRow"><strong>Jízda v pořádku:</strong> <span style="color:${rec.rideOk==='ok'?'var(--green)':'var(--red)'}; font-weight:bold;">${rec.rideOk === 'nok' ? 'NE' : (rec.rideOk === 'ok' ? 'ANO' : '-')}</span></div>
             ${rec.rideIssue ? `<div class="detailRow" style="background:rgba(239,68,68,0.1); border-color:rgba(239,68,68,0.3);"><strong style="color:#fca5a5;">Problém ze směny:</strong><br>${escapeHtml(rec.rideIssue)}</div>` : ''}
         </div>
 
-        <h3 style="margin: 0 0 16px; font-size:18px; color:#fff;">Stav položek checklistu</h3>
+        <h3 style="margin: 0 0 12px; font-size:16px; color:#fff;">Stav položek checklistu</h3>
         <div class="detailList">${itemsHtml}</div>
         
-        <div style="margin-top:24px; padding: 16px; background:rgba(0,0,0,0.2); border-radius: 16px; border: 1px solid var(--card-border);">
-            <div style="margin-bottom:12px;"><strong>Potvrdil stav vozu:</strong> <span style="color:${rec.confirmed?'var(--green)':'var(--red)'}">${rec.confirmed ? 'ANO' : 'NE'}</span></div>
-            <div style="margin-bottom:12px;"><strong>Odevzdal v pořádku:</strong> <span style="color:${rec.handed?'var(--green)':'var(--red)'}">${rec.handed ? 'ANO' : 'NE'}</span></div>
-            ${rec.signature ? `<div><strong style="display:block; margin-bottom:8px;">Podpis řidiče:</strong><img src="${rec.signature}" style="max-height:80px; background:rgba(255,255,255,0.9); border-radius:8px; padding:8px;"></div>` : ''}
+        <div style="margin-top:20px; padding: 14px; background:rgba(0,0,0,0.2); border-radius: 14px; border: 1px solid var(--card-border);">
+            <div style="margin-bottom:10px;"><strong>Potvrdil stav vozu:</strong> <span style="color:${rec.confirmed?'var(--green)':'var(--red)'}">${rec.confirmed ? 'ANO' : 'NE'}</span></div>
+            <div style="margin-bottom:10px;"><strong>Odevzdal v pořádku:</strong> <span style="color:${rec.handed?'var(--green)':'var(--red)'}">${rec.handed ? 'ANO' : 'NE'}</span></div>
+            ${rec.signature ? `<div><strong style="display:block; margin-bottom:6px;">Podpis řidiče:</strong><img src="${rec.signature}" style="max-height:60px; background:rgba(255,255,255,0.9); border-radius:8px; padding:6px;"></div>` : ''}
         </div>
         
-        <div style="margin-top: 32px; text-align: center;">
+        <div style="margin-top: 24px; text-align: center;">
             <button class="btn dangerBtn" id="deleteRecordBtn" style="width:100%; justify-content:center;">
                 <svg class="icon" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
                 Trvale smazat tento záznam
@@ -1024,17 +1018,17 @@
        }
     });
 
-    // --- FUNKCE PRO GENEROVÁNÍ OBRÁZKU SMĚNY ---
+    // --- FUNKCE PRO GENEROVÁNÍ KOMPAKTNÍHO OBRÁZKU SMĚNY ---
     function createExportDOM(rec) {
       const wrap = document.createElement('div');
       wrap.style.position = 'absolute';
       wrap.style.left = '-9999px';
       wrap.style.top = '0';
-      wrap.style.width = '850px';
-      wrap.style.backgroundColor = '#0f172a'; // Tmavé pozadí pro export, aby vypadal jako aplikace
+      wrap.style.width = '700px'; /* Užší obrázek pro lepší čitelnost na mobilu */
+      wrap.style.backgroundColor = '#0f172a';
       wrap.style.color = '#f8fafc';
-      wrap.style.padding = '40px';
-      wrap.style.fontFamily = 'Arial, sans-serif'; // Bezpečný font pro render
+      wrap.style.padding = '25px'; /* Menší padding kolem celého dokumentu */
+      wrap.style.fontFamily = 'Arial, sans-serif'; 
       wrap.style.boxSizing = 'border-box';
       wrap.style.zIndex = '-100';
 
@@ -1043,14 +1037,14 @@
       const statusColor = rec.criticalStop ? '#ef4444' : (rec.status === 'OK' ? '#22c55e' : '#f59e0b');
 
       wrap.innerHTML = `
-        <div style="border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 20px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: flex-end;">
-          <h1 style="margin: 0; font-size: 38px; font-weight: bold; color: #fff;">RB Taxi <span style="color: #facc15;">Checklist</span></h1>
-          <div style="font-size: 18px; color: #94a3b8;">${dt}</div>
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end;">
+          <h1 style="margin: 0; font-size: 28px; font-weight: bold; color: #fff;">RB Taxi <span style="color: #facc15;">Checklist</span></h1>
+          <div style="font-size: 14px; color: #94a3b8;">${dt}</div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #1e293b; padding: 25px; border-radius: 16px; margin-bottom: 30px; font-size: 18px; border: 1px solid rgba(255,255,255,0.05);">
-          <div><strong style="color: #94a3b8;">SPZ:</strong> <span style="font-size: 24px; font-weight: bold; color: #fff;">${escapeHtml(rec.spz)}</span></div>
-          <div><strong style="color: #94a3b8;">Stav vozu:</strong> <span style="color: ${statusColor}; font-weight: bold; font-size: 20px;">${escapeHtml(rec.criticalStop ? 'STOP - KRITICKÁ ZÁVADA' : rec.status)}</span></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: #1e293b; padding: 16px; border-radius: 12px; margin-bottom: 20px; font-size: 14px; border: 1px solid rgba(255,255,255,0.05);">
+          <div><strong style="color: #94a3b8;">SPZ:</strong> <span style="font-size: 18px; font-weight: bold; color: #fff;">${escapeHtml(rec.spz)}</span></div>
+          <div><strong style="color: #94a3b8;">Stav vozu:</strong> <span style="color: ${statusColor}; font-weight: bold; font-size: 16px;">${escapeHtml(rec.criticalStop ? 'STOP - KRITICKÁ ZÁVADA' : rec.status)}</span></div>
           <div><strong style="color: #94a3b8;">Řidič:</strong> ${escapeHtml(rec.driver)}</div>
           <div><strong style="color: #94a3b8;">Převzato po:</strong> ${escapeHtml(rec.taken)}</div>
           <div><strong style="color: #94a3b8;">Tachometr:</strong> ${escapeHtml(rec.kmStart || '-')} ➔ ${escapeHtml(rec.kmEnd || '-')} km</div>
@@ -1060,46 +1054,46 @@
         </div>
 
         ${nokOnly.length > 0 ? `
-        <div style="background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); padding: 25px; border-radius: 16px; margin-bottom: 30px;">
-          <h2 style="margin: 0 0 20px 0; color: #fca5a5; font-size: 22px;">Evidované závady</h2>
+        <div style="background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); padding: 16px; border-radius: 12px; margin-bottom: 20px;">
+          <h2 style="margin: 0 0 15px 0; color: #fca5a5; font-size: 18px;">Evidované závady</h2>
           ${nokOnly.map(i => `
-            <div style="margin-bottom: 16px; font-size: 16px; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px;">
-              <strong style="color: #fff; font-size: 18px;">• ${escapeHtml(i.label)}</strong>
-              ${i.carried ? `<span style="background: #f59e0b; color: #000; padding: 3px 10px; border-radius: 999px; font-size: 12px; margin-left: 10px; font-weight: bold;">Z MINULA</span>` : ''}
+            <div style="margin-bottom: 12px; font-size: 14px; background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+              <strong style="color: #fff; font-size: 15px;">• ${escapeHtml(i.label)}</strong>
+              ${i.carried ? `<span style="background: #f59e0b; color: #000; padding: 2px 8px; border-radius: 999px; font-size: 11px; margin-left: 8px; font-weight: bold;">Z MINULA</span>` : ''}
               <br>
-              <div style="color: #cbd5e1; margin-top: 8px;">Detail: ${escapeHtml(i.note || 'bez popisu')}</div>
-              ${i.group === 'visual' ? `<div style="color: #94a3b8; font-size: 14px; margin-top: 4px;">Typ: ${escapeHtml(i.type || '-')} | Vznik: ${escapeHtml(i.who || '-')}</div>` : ''}
-              ${i.photo ? `<div style="margin-top: 10px;"><img src="${i.photo}" style="max-width: 300px; max-height: 200px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);"></div>` : ''}
+              <div style="color: #cbd5e1; margin-top: 6px;">Detail: ${escapeHtml(i.note || 'bez popisu')}</div>
+              ${i.group === 'visual' ? `<div style="color: #94a3b8; font-size: 13px; margin-top: 4px;">Typ: ${escapeHtml(i.type || '-')} | Vznik: ${escapeHtml(i.who || '-')}</div>` : ''}
+              ${i.photo ? `<div style="margin-top: 8px;"><img src="${i.photo}" style="max-width: 250px; max-height: 150px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);"></div>` : ''}
             </div>
           `).join('')}
         </div>
         ` : `
-        <div style="background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); padding: 20px; border-radius: 16px; margin-bottom: 30px; color: #86efac; font-weight: bold; font-size: 18px; text-align: center;">
+        <div style="background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); padding: 15px; border-radius: 12px; margin-bottom: 20px; color: #86efac; font-weight: bold; font-size: 15px; text-align: center;">
           Vozidlo je bez závad (Vše OK)
         </div>
         `}
 
-        <div style="margin-bottom: 30px; background: #1e293b; padding: 25px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
-          <h2 style="margin: 0 0 20px 0; font-size: 22px; color: #fff;">Checklist</h2>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 15px; color: #cbd5e1;">
+        <div style="margin-bottom: 20px; background: #1e293b; padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+          <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #fff;">Checklist</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px; color: #cbd5e1;">
             ${(rec.items||[]).map(i => `
-              <div style="display: flex; gap: 10px; align-items: flex-start;">
-                <span style="color: ${i.state==='ok'?'#22c55e':'#ef4444'}; font-weight: bold; font-size: 18px;">${i.state==='ok'?'✓':'✕'}</span>
+              <div style="display: flex; gap: 8px; align-items: flex-start;">
+                <span style="color: ${i.state==='ok'?'#22c55e':'#ef4444'}; font-weight: bold; font-size: 15px;">${i.state==='ok'?'✓':'✕'}</span>
                 <span>${escapeHtml(i.label)}</span>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 25px; background: #020617; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
-          <div style="font-size: 18px; line-height: 1.8;">
-            <strong style="color: #94a3b8;">Potvrdil převzetí vozu:</strong> <span style="color:${rec.confirmed?'#22c55e':'#ef4444'}; font-weight:bold;">${rec.confirmed ? 'ANO' : 'NE'}</span><br>
-            <strong style="color: #94a3b8;">Odevzdal vůz v pořádku:</strong> <span style="color:${rec.handed?'#22c55e':'#ef4444'}; font-weight:bold;">${rec.handed ? 'ANO' : 'NE'}</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px; background: #020617; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+          <div style="font-size: 15px; line-height: 1.6;">
+            <strong style="color: #94a3b8;">Potvrdil převzetí:</strong> <span style="color:${rec.confirmed?'#22c55e':'#ef4444'}; font-weight:bold;">${rec.confirmed ? 'ANO' : 'NE'}</span><br>
+            <strong style="color: #94a3b8;">Odevzdal v pořádku:</strong> <span style="color:${rec.handed?'#22c55e':'#ef4444'}; font-weight:bold;">${rec.handed ? 'ANO' : 'NE'}</span>
           </div>
           ${rec.signature ? `
           <div style="text-align: center;">
-            <div style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">Podpis řidiče:</div>
-            <img src="${rec.signature}" style="height: 80px; max-width: 250px; object-fit: contain; background: rgba(255,255,255,0.9); padding: 10px; border-radius: 10px;">
+            <div style="color: #94a3b8; font-size: 12px; margin-bottom: 6px;">Podpis řidiče:</div>
+            <img src="${rec.signature}" style="height: 60px; max-width: 200px; object-fit: contain; background: rgba(255,255,255,0.9); padding: 8px; border-radius: 8px;">
           </div>
           ` : ''}
         </div>
@@ -1132,7 +1126,7 @@
       const rec = history[0];
 
       try {
-        showToast('Generuji designový report...', 'success');
+        showToast('Generuji report...', 'success');
         const blob = await generateImageBlob(rec);
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
@@ -1240,7 +1234,6 @@
       clearSignature();
       if(!keepSpz) {
           byId('spz').selectedIndex = 0;
-          // NEBUDEME MAZAT JMÉNO ŘIDIČE, usnadňuje to práci (zůstane to naposledy zadané)
       }
       updateSummary();
     }
@@ -1254,7 +1247,7 @@
       const resize = () => {
         const rect = sigCanvas.parentElement.getBoundingClientRect();
         sigCanvas.width = rect.width;
-        sigCanvas.height = 180;
+        sigCanvas.height = 160;
         sigCtx.lineWidth = 3;
         sigCtx.lineCap = 'round';
         sigCtx.strokeStyle = '#facc15'; 
